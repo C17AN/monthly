@@ -1,14 +1,14 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-const LogsScreen = () => {
+const CalculatorScreen = () => {
   return (
     <View>
-      <Text>로그 스크린</Text>
+      <Text>계산기</Text>
     </View>
   );
 };
 
-export default LogsScreen;
+export default CalculatorScreen;
 
 const styles = StyleSheet.create({});

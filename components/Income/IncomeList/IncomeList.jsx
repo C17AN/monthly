@@ -33,16 +33,23 @@ const DATA = [
 const IncomeList = () => {
   const renderIncomeItem = ({ item }) => <IncomeItem item={item} />;
   const [isAddIncomeModalOpen, setIsAddIncomeModalOpen] = useState(false);
+  const [sortByDate, setSortByDate] = useState(true);
 
   const onPressAddIncome = () => {
     setIsAddIncomeModalOpen(true);
   };
 
+  const toggleSortMode = () => {};
+
   return (
     <View style={styles.container}>
       <View style={styles.income__label}>
         <Text style={styles.text__list}>배당수익 목록</Text>
-        <Text style={styles.text__sort}>정렬</Text>
+        <View style={styles.container__sort}>
+          <TouchableOpacity onPress={() => setSortByDate((prev) => !prev)}>
+            <Text>{sortByDate ? "배당일순" : "금액순"}</Text>
+          </TouchableOpacity>
+        </View>
       </View>
       <SafeAreaView style={{ marginTop: 10 }}>
         <FlatList
@@ -90,7 +97,10 @@ const styles = StyleSheet.create({
     color: "#666666",
   },
   text__sort: { fontSize: 14, marginRight: 20 },
-  buttonContainer: {},
+  container__sort: {
+    flexDirection: "row",
+    marginRight: 20,
+  },
   addIncome: {
     display: "flex",
     flexDirection: "row",
