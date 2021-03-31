@@ -1,11 +1,12 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import Container from "../../components/Container";
 
 const CalculatorScreen = () => {
   return (
-    <View>
+    <Container>
       <Text>계산기</Text>
-    </View>
+    </Container>
   );
 };
 

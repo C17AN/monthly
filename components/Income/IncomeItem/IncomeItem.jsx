@@ -5,7 +5,7 @@ const IncomeItem = ({ item }) => {
   const { name, theme } = item;
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>티커 : {name}</Text>
+      <Text style={styles.title}>{name}</Text>
       <Text style={styles.theme}>{theme}</Text>
     </View>
   );
@@ -27,4 +27,5 @@ const styles = StyleSheet.create({
     shadowColor: "black",
     shadowRadius: 10,
   },
+  text: {},
 });

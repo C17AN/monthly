@@ -1,11 +1,16 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import Settings from "../../components/Settings/Settings";
+import Container from "../../components/Container";
+import { ScrollView } from "react-native-gesture-handler";
 
 const SettingsScreen = () => {
   return (
-    <View>
-      <Text>설정</Text>
-    </View>
+    <Container>
+      <ScrollView>
+        <Settings />
+      </ScrollView>
+    </Container>
   );
 };
 
